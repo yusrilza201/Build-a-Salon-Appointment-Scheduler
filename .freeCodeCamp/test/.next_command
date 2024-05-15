@@ -626,3 +626,12 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+pg_dump -cC --inserts -U freecodecamp salon > salon.sql
+git remote add origin https://github.com/yusrilza201/Build-a-Salon-Appointment-Scheduler.git
+git rm remote
+git remote -v
+git remote rm
+git remote remove origin
+git remote add origin https://github.com/yusrilza201/Build-a-Salon-Appointment-Scheduler.git
+git checkout -b feat/Build-a-Salon-Appointment-Scheduler-solution
+git add .
